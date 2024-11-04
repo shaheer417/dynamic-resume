@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shaheer Resume</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container" id="cv-form"> 
+      <h1 class="heading">Resume Generator</h1>
+      <p>By Shaheer Niazi</p>
+      <div class="row">
+        <div class="column">
+          <h3>Personal Information</h3>
+          <div class="form-group">
+            <label for="nameField">Name</label>
+            <input
+              type="text"
+              placeholder="Enter name"
+              class="form-control"
+              id="nameField"
+            />
+          </div>
+          <div class="form-group">
+            <label for="contactField">Contact</label>
+            <input
+              type="text"
+              placeholder="Enter phone number"
+              class="form-control"
+              id="contactField"
+            />
+          </div>
+          <div class="form-group">
+            <label for="addressField">Address</label>
+            <input
+              type="text"
+              placeholder="Enter address"
+              class="form-control"
+              id="addressField"/>
+          </div>
+          <h3 class="links"><strong>Important Links</strong></h3>
+          <div class="form-group">
+            <label for="fbField">Facebook</label>
+            <input
+              type="text"
+              placeholder="Enter facebook link"
+              class="form-control"
+              id="fbField"
+            />
+          </div><div class="form-group">
+            <label for="linkedField">linkedIn</label>
+            <input
+              type="text"
+              placeholder="Enter linkedin id"
+              class="form-control"
+              id="linkedField"
+            />
+          </div><div class="form-group">
+            <label for="gmailField">Gmail</label>
+            <input
+              type="text"
+              placeholder="Enter gmail"
+              class="form-control"
+              id="gmailField"
+            />
+          </div>
+        </div>
+        <div class="column"><h3>Professional Information</h3>
+             <div class="form-group">
+                <div class="label-container"><label for="" >Objective</label></div>
+            
+            <textarea
+            rows="3"
+            id="objective"
+              type="text"
+              placeholder="Enter objective"
+              class="form-control"
+            ></textarea>
+          </div>
+        
+          <div class="form-group" id="we">
+           <div class="label-container"><label >Experience</label></div>
+           
+            <textarea
+            rows="3"
+            id="experience"
+              
+              placeholder="Enter experience"
+              class="form-control weField"
+            ></textarea>
+            <div class="button-container" id="weAddButton"> 
+            <button onclick="AddNewWEField()">Add</button>
+          </div>
+          </div>
+          
+
+          <div class="form-group" id="aq">
+           <div class="label-container"><label >Qualification</label></div>
+           
+            <textarea
+            rows="3"
+            id="qualification"
+              
+              placeholder="Enter experience"
+              class="form-control aqField"
+            ></textarea>
+             <div class="button-container" id="aqAddButton">
+            <button onclick="AddNewQField()">Add</button>
+          </div>
+          </div>
+         
+        </div>
+  
+        
+        </div>
+         <div class="cv-button">
+        <button onclick="generateCV()">Generate CV</button>
+      </div>
+       
+      </div>
+    </div>
+     <div class="container" id="cv-template">
+      <div class="row">
+        <!-- first column -->
+        <div class="column" id="col-1">
+          <img src="./image.png" alt="" class="profile-img">
+          <div class="container">
+          <p id="nameT1">Shaheer Khan Niazi</p>
+          <p id="contactT">+92 337822662</p>
+          <p id="addressT">A34 karachi rajput cooperative housing society, scheme 33 gulzar e hijri, Karachi</p>
+          <hr>
+          <p><a id="fbT" href="#1">https://www.instagram.com/shaheer.niazi.90</a></p>
+          <p><a id="linkedT" href="#1">https://www.instagram.com/shaheer.niazi.90</a></p>
+          <p><a id="gmailT" href="#1">https://www.instagram.com/shaheer.niazi.90</a></p>
+
+        </div>
+        </div>
+        
+
+
+        <!-- second-column -->
+        <div class="column" id="col-2">
+          <h1 class="name" id="nameT2">Shaheer Khan Niazi</h1>
+          <div class="card">
+            <div class="card-header">
+              <h3>Objective</h3>
+            </div>
+            <div class="card-body">
+              <p id="objT">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam corporis obcaecati exercitationem accusantium quaerat non incidunt, enim magnam architecto molestias. Quod doloremque facilis minus distinctio laudantium assumenda nostrum officiis asperiores.</p>
+            </div>
+          </div>
+
+          <!-- work experience -->
+           <div class="card">
+            <div class="card-header">
+              <h3>Experience </h3>
+            </div>
+            <div class="card-body">
+             <ul id="weT">
+              <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.  </li>
+             </ul>
+            </div>
+          </div>
+ 
+          <!-- academic qualification -->
+           <div class="card">
+            <div class="card-header">
+              <h3>Qualification</h3>
+            </div>
+            <div class="card-body">
+              <ul id="aqT">
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt dolorum sapiente explicabo rerum nulla doloribus magni sit ab molestiae nisi saepe repellat consequatur eaque, rem quibusdam unde doloremque voluptates quo!</li>
+              </ul>
+            </div>
+          </div>
+          <div class="cv-button">
+            <a href="./CV.pdf" download class="download">Download CV</a></div>
+        
+      </div>
+     </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
