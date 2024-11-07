@@ -1,17 +1,17 @@
 function AddNewWEField(): void {
-  // Create a new textarea element
+  
   let newNode = document.createElement("textarea");
   newNode.classList.add("form-control");
   newNode.classList.add("weField");
   newNode.setAttribute("rows", "2");
   newNode.setAttribute("placeholder", "Enter Experience");
 
-  // Styling for the new textarea
+
   newNode.style.marginTop = "10px";
   newNode.style.padding = "10px";
   newNode.style.width = "77%";
 
-  // Insert the new textarea before the "Add" button
+
   let weOb = document.getElementById("we");
   let weAddButtonOb = document.getElementById("weAddButton");
 
@@ -21,19 +21,19 @@ function AddNewWEField(): void {
 }
 
 function AddNewQField(): void {
-  // Create a new textarea element
+  
   let newNode = document.createElement("textarea");
   newNode.classList.add("form-control");
   newNode.classList.add("aqField");
   newNode.setAttribute("rows", "2");
   newNode.setAttribute("placeholder", "Enter Qualification");
 
-  // Styling for the new textarea
+
   newNode.style.marginTop = "10px";
   newNode.style.padding = "10px";
   newNode.style.width = "77%";
 
-  // Insert the new textarea before the "Add" button
+  
   let aqOb = document.getElementById("aq");
   let aqAddButtonOb = document.getElementById("aqAddButton");
 
@@ -43,7 +43,7 @@ function AddNewQField(): void {
 }
 
 function generateCV(): void {
-  // Retrieve and display name information
+  //  display name information
   const nameField = (document.getElementById("nameField") as HTMLInputElement)
     .value;
   const nameT1 = document.getElementById("nameT1");
@@ -129,5 +129,43 @@ function generateCV(): void {
   const aqT = document.getElementById("aqT");
   if (aqT) {
     aqT.innerHTML = aqContent;
+  }
+  // Display reference
+  const ref = document.getElementsByClassName("rfField") as HTMLCollectionOf<HTMLInputElement>;
+let refContent = "";
+
+for (let i = 0; i < ref.length; i++) {
+  refContent += `<li>${ref[i].value}</li>`;
+}
+
+const RfT = document.getElementById("RfT") as HTMLElement | null;
+if (RfT) {
+  RfT.innerHTML = refContent;
+}
+
+
+  // Hides the CV form and displays the CV template
+  const cvForm = document.getElementById("cv-form") as HTMLElement;
+  const cvTemplate = document.getElementById("cv-template") as HTMLElement;
+
+  if (cvForm && cvTemplate) {
+    cvForm.style.display = "none";
+    cvTemplate.style.display = "block";
+  }
+
+  // Setting the image
+  const imgField = document.getElementById("imgField") as HTMLInputElement;
+  const imgTemplate = document.getElementById(
+    "imgTemplate"
+  ) as HTMLImageElement;
+
+  if (imgField && imgTemplate && imgField.files?.length) {
+    const file = imgField.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+
+    reader.onloadend = () => {
+      imgTemplate.src = reader.result as string;
+    };
   }
 }

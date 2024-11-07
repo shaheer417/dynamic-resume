@@ -1,7 +1,7 @@
-/* Basic Styles */
+
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #eaecec, #f2efef, #e2d4e5);
+  font-family: 'Arial', sans-serif;
+  /* background: linear-gradient(135deg, #e0f7fa, #fce4ec, #f3e5f5); */
   background-size: 400% 400%;
   color: #333;
   margin: 0;
@@ -13,35 +13,35 @@ body {
   max-width: 900px;
   margin: 30px auto;
   padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #ffffff, #f9f9f9);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: fadeIn 0.8s ease-out;
 }
 
 .container:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .heading {
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1.5rem;
-  color: #333;
+  color: #007acc;
   transition: color 0.3s;
+  animation: pulse 1.5s infinite;
 }
 
 .heading:hover {
-  color: #007acc;
+  color: #005f99;
 }
 
 p {
   text-align: center;
-  font-size: 1.1rem;
-  color: #666;
-  text-decoration: underline;
+  font-size: 1.2rem;
+  color: #555;
 }
 
 .row {
@@ -57,10 +57,13 @@ p {
   padding: 20px;
   transition: transform 0.3s;
   animation: fadeIn 0.5s ease-in-out;
+  background: #f7fbfc;
+  border-radius: 10px;
 }
 
 .column:hover {
-  transform: scale(1.02);
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .profile-img {
@@ -69,11 +72,17 @@ p {
   height: 150px;
   border-radius: 50%;
   margin: 0 auto;
-  margin-bottom: 20px; /* Added spacing below profile image */
+  margin-bottom: 20px;
+  border: 4px solid #007acc;
+  transition: border-color 0.3s ease;
+}
+
+.profile-img:hover {
+  border-color: #ff6f61;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   margin-bottom: 1rem;
   color: #444;
 }
@@ -82,87 +91,105 @@ a {
   color: #007acc;
   text-decoration: none;
   display: block;
-  margin-bottom: 10px; /* Added spacing between links */
+  margin-bottom: 10px;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #ff6f61;
+  transform: translateX(5px);
 }
 
 .card {
-  background-color: #f9f9f9;
+  background: #fdfdfd;
   border-radius: 10px;
   padding: 15px;
-  margin-bottom: 20px; /* Added spacing between cards */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .card-header h3 {
   margin: 0;
+  color: #333;
 }
 
 .card-body p,
 .card-body ul {
   margin: 10px 0;
+  color: #666;
 }
 
 .card-body ul li {
-  margin-bottom: 10px; /* Added spacing between list items */
+  margin-bottom: 10px;
+  transition: color 0.3s;
 }
 
-/* Input Fields */
+.card-body ul li:hover {
+  color: #007acc;
+}
+
+
 input[type="text"],
 textarea {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
+  padding: 12px;
+  border: 1px solid #ddd;
   border-radius: 5px;
-  margin-bottom: 15px; /* Added spacing between input fields */
-  transition: border-color 0.3s;
+  margin-bottom: 15px;
+  transition: border-color 0.3s, box-shadow 0.3s;
   box-sizing: border-box;
 }
 
 input[type="text"]:focus,
 textarea:focus {
   border-color: #007acc;
+  box-shadow: 0 0 8px rgba(0, 122, 204, 0.3);
 }
 
 button {
-  background-color: #007acc;
+  background: linear-gradient(135deg, #007acc, #005f99);
   color: #fff;
-  padding: 10px 20px;
+  padding: 12px 25px;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.3s, transform 0.3s;
-  margin-top: 15px; /* Added spacing above button */
+  transition: background 0.3s, transform 0.3s;
+  margin-top: 15px;
   margin-left: 40%;
 }
 
 button:hover {
-  background-color: #005f99;
-  transform: scale(1.05);
-}
-.download {
-  background-color: #007acc;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s, transform 0.3s;
-  margin-top: 15px; /* Added spacing above button */
-  margin-left: 40%;
-  
-}
-.download:hover {
-  background-color: #005f99;
-  transform: scale(1.05);
+  background: linear-gradient(135deg, #005f99, #007acc);
+  transform: scale(1.1);
 }
 
-/* Background Animation */
+.download {
+  background: linear-gradient(135deg, #007acc, #005f99);
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.download:hover {
+  background: linear-gradient(135deg, #005f99, #007acc);
+  transform: scale(1.1);
+}
+
+
 @keyframes gradientAnimation {
   0% {
     background-position: 0% 50%;
@@ -175,13 +202,23 @@ button:hover {
   }
 }
 
-/* Responsive Styles */
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+
 @media (max-width: 1024px) {
   .container {
     padding: 15px;
   }
   .heading {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
   .column {
     min-width: 100%;
@@ -195,17 +232,13 @@ button:hover {
     padding: 10px;
   }
   .heading {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
   p {
     font-size: 1rem;
   }
-  input[type="text"],
-  textarea {
-    padding: 8px;
-  }
   button {
-    padding: 8px 15px;
+    padding: 10px 20px;
     font-size: 0.9rem;
   }
   .row {
@@ -223,26 +256,21 @@ button:hover {
     padding: 8px;
   }
   .heading {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
   p {
     font-size: 0.9rem;
   }
-  input[type="text"],
-  textarea {
-    padding: 6px;
-    font-size: 0.9rem;
-  }
   button {
-    padding: 6px 10px;
-    font-size: 0.8rem;
+    padding: 8px 15px;
+    font-size: 0.85rem;
   }
   .column {
     padding: 8px;
   }
 }
 
-/* Fade-in Animation */
+
 @keyframes fadeIn {
   0% {
     opacity: 0;

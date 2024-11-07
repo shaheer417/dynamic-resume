@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shaheer Resume</title>
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -40,6 +40,10 @@
               class="form-control"
               id="addressField"/>
           </div>
+          <div class="form-group">
+            <label for="">Select Picture</label>
+            <input type="file" class="form-control" id="imgField"/>
+          </div>
           <h3 class="links"><strong>Important Links</strong></h3>
           <div class="form-group">
             <label for="fbField">Facebook</label>
@@ -65,6 +69,20 @@
               class="form-control"
               id="gmailField"
             />
+          </div>
+          <div class="form-group" id="rf">
+            <div class="label-container"><label >Reference</label></div>
+           
+            <textarea
+            rows="3"
+            id="reference"
+              
+              placeholder="Enter reference"
+              class="form-control rfField"
+            ></textarea>
+            <div class="button-container" id="RfAddButton"> 
+            <button onclick="AddNewRField()">Add</button>
+          </div>
           </div>
         </div>
         <div class="column"><h3>Professional Information</h3>
@@ -125,7 +143,7 @@
       <div class="row">
         <!-- first column -->
         <div class="column" id="col-1">
-          <img src="./image.png" alt="" class="profile-img">
+          <img src="./image.png" alt="" class="profile-img" id="imgTemplate">
           <div class="container">
           <p id="nameT1">Shaheer Khan Niazi</p>
           <p id="contactT">+92 337822662</p>
@@ -134,7 +152,12 @@
           <p><a id="fbT" href="#1">https://www.instagram.com/shaheer.niazi.90</a></p>
           <p><a id="linkedT" href="#1">https://www.instagram.com/shaheer.niazi.90</a></p>
           <p><a id="gmailT" href="#1">https://www.instagram.com/shaheer.niazi.90</a></p>
-
+          <h3>Reference</h3>
+           <ul id="RfT">
+            <li>Lorem ipsum  </li>
+           </ul>
+          
+        </div>
         </div>
         </div>
         
